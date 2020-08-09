@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+{{ search_term }}
+{% endblock title %}
+
+{% block content %}
+<div class="col-md-12">
+    <h3>You searched: {{ search_term }}</h3>
+    <div class="row">
+    
+        {% if contacts  %}
+            {% for contact in contacts %}
+            {% include 'partials/_card.html' %}
+            {% endfor %}
+        {% else %}
+            <h1>No contacts</h1>
+        {% endif %}
+    </div>
+</div>
+{% endblock content %}

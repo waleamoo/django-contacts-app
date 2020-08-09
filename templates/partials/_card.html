@@ -1,0 +1,17 @@
+{% load static %}
+<div class="card m-4" style="width: 20rem;">
+    <div class="card-header">
+        {{ contact.name }}
+    </div>
+    <div class="card-body">
+        <a href="{% url 'detail' contact.id %}"><img src="{{ contact.image.url }}" alt="Client Image" height="50" width="50" class="img-fluid"></a>
+        <h3>{{ contact.phone }}</h3>
+        <h3>{{ contact.email }}</h3>
+        <h3>{{ contact.gender }}</h3>
+        <h3>{{ contact.phone }}</h3>
+        <h3>{{ contact.info }}</h3>
+    </div>
+    <div class="card-footer">
+        <a href="{% url 'detail' contact.id %}" class="btn btn-primary btn-lg">View</a>
+    </div>
+</div>
